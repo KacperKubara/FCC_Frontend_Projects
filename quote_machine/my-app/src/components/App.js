@@ -1,25 +1,23 @@
 import React from 'react';
-import logo from '../logo.svg';
-import '../css/App.css';
+import Quote from './Quote'
+import Author from './Author'
+import '../css/components.scss';
 
 class App extends React.Component {
+  constructor(props){
+    super(props);
+  }
   render() {
+    
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React test
-          </a>
-        </header>
+      <div className="quote-box">
+      <Quote id="text"/>
+      <hr/>
+      <Author id="author"/>
+      <div class="buttons">
+      <a class="button" id="quote">Quote</a>
+      <a href="https://twitter.com/" class="button" id="tweet-quote">Tweet</a>
+      </div>
       </div>
     );
   }
