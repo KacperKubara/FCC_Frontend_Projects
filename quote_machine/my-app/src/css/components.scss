@@ -2,9 +2,19 @@ a.button{
     -webkit-appearance: button;
     -moz-appearance: button;
     appearance: button;
-
+    padding: 10px;
+    border-radius: 15px 50px 30px 5px;
+    margin: 5px;
+    background-color: rgb(95, 148, 95);
+    color: white;
     text-decoration: none;
-    color: initial;
+    transition: transform 1s;
+}
+a.button:hover{
+    background-color:  rgb(23, 124, 23); 
+}
+a.button:hover {
+    transform: scale(1.1) rotate(360deg);
 }
 .quote-box {
     width: 300px;

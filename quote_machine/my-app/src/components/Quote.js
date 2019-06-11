@@ -1,5 +1,4 @@
 import React from 'react';
-import quote_db from '../quote_db'
 import '../css/components.scss';
 
 class Quote extends React.Component{
