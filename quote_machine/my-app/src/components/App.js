@@ -22,7 +22,7 @@ class App extends React.Component {
       <div className="quote-box">
       <Quote id="text" quote_id={this.state.quote_id}/>
       <hr/>
-      <Author id="author"/>
+      <Author id="author" author_index={this.state.quote_id}/>
       <div class="buttons">
       <a class="button" id="quote" onClick={this.generateQoute}>Quote</a>
       <a href="https://twitter.com/" class="button" id="tweet-quote">Tweet</a>

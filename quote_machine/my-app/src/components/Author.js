@@ -4,14 +4,14 @@ import '../css/components.scss'
 class Author extends React.Component{
     constructor(props){
         super(props);
-        this.state = {
-            author_index: 0, 
-            author: ['Kacper', 'Marcin']
+        this.state = { 
+            author: ['Kacper', 'Marcin', 'Leonardo']
         }
     }
 
     render(){
-        let author = this.state.author[this.state.author_index];
+        const author_size = this.state.author.length;
+        let author = this.state.author[this.props.author_index%author_size];
         return(
            <h1 className='quote-box-author'>Author: {author}</h1> 
         );
