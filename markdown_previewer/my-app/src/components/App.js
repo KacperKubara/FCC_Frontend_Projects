@@ -1,28 +1,33 @@
 import React from "react";
 import Editor from "./Editor";
 import Preview from "./Preview";
-import styles from "./app.css"
+import styles from "./app.module.css";
 
 class App extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
-      text: 'Please start typing'
-    }
+      text: ""
+    };
     this.onType = this.onType.bind(this);
   }
-  onType(event){
+  onType(event) {
     this.setState({
       text: event.target.value
     });
   }
   render() {
     return (
-      <div>
-        <h1>Test</h1>
-        <Editor text={this.state.text}
-         onType={this.onType}/>
-        <Preview text={this.state.text}/>
+      <div className={styles.grid}>
+        <div className={styles.header}>
+          <h1>Test</h1>
+        </div>
+        <div className={styles.editor}>
+          <Editor text={this.state.text} onType={this.onType} />
+        </div>
+        <div className={styles.previewer}>
+          <Preview text={this.state.text} />
+        </div>
       </div>
     );
   }

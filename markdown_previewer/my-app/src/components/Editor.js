@@ -5,7 +5,7 @@ class Editor extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            value: 'Please start typing'
+            value: ''
         };
         this.handleChange = this.handleChange.bind(this);
     }
@@ -15,7 +15,7 @@ class Editor extends React.Component{
     render(){
         return(
             <form>
-            <textarea value={this.props.text}
+            <textarea placeholder="Insert text here" value={this.props.text}
             onChange={this.handleChange}/>
             </form>
         );
