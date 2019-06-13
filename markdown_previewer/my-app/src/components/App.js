@@ -1,6 +1,8 @@
 import React from "react";
 import Editor from "./Editor";
 import Preview from "./Preview";
+import styles from "./app.css"
+
 class App extends React.Component {
   constructor(props){
     super(props);

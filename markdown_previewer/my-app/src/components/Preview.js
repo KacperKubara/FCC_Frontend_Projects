@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from "./preview.css"
 
 class Preview extends React.Component{
     constructor(props){
